@@ -16,6 +16,11 @@ router.beforeEach((to, from, next) => {
   next();
 })
 
+router.beforeResolve((to, from, next) => {
+  console.log(`>> 全局路由 beforResolve`);
+  next();
+})
+
 router.afterEach((to, from) => {
-  console.log(`>> 全局路由 afterEach: from ${from.fullPath} to ${to.fullPath}`);
+  console.log(`>> 全局路由 afterEach`);
 })
